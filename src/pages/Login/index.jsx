@@ -14,6 +14,7 @@ function Login() {
         fugiat odio dolore voluptate quis natus quaerat! Facere animi cupiditate
         possimus reiciendis quaerat maiores quae veniam error modi. Maxime.
       </Paragrafo>
+      <button type="button">Enviar</button>
     </Container>
   );
 }

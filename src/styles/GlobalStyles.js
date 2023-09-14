@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import { primaryColor, primaryDarkColor } from '../config/colors';
 
 export default createGlobalStyle`
   * {
@@ -11,15 +12,23 @@ export default createGlobalStyle`
   body {
     font-family: sans-serif;
     height: 100vh;
-    background: #eeeeee;
+    background: ${primaryDarkColor};
+    color: ${primaryDarkColor};
   }
 
   button {
     cursor: pointer;
+    background: ${primaryColor};
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 700;
   }
 
   a {
     text-decoration: none;
+    color: ${primaryColor};
   }
 
   ul {
