@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { Title, Paragrafo } from './styled';
 import { Container } from '../../styles/GlobalStyles';
-import { botaoClicado } from '../../store';
+import { botaoClicado } from '../../store/modules/example/exampleSlice';
 
 function Login() {
   const dispatch = useDispatch();
