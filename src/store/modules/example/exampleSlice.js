@@ -1,18 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const buttonSlice = createSlice({
-  name: 'button',
+const exampleSlice = createSlice({
+  name: 'example',
   initialState: {
-    botaoClicado: false,
+    clickedButton: false,
   },
   reducers: {
     // eslint-disable-next-line no-unused-vars
-    botaoClicado(state, action) {
+    clickedButton(state, action) {
       // eslint-disable-next-line no-param-reassign
-      state.botaoClicado = !state.botaoClicado;
+      state.clickedButton = !state.clickedButton;
     },
   },
 });
 
-export const { botaoClicado } = buttonSlice.actions;
-export default buttonSlice.reducer;
+export const { clickedButton } = exampleSlice.actions;
+export default exampleSlice.reducer;

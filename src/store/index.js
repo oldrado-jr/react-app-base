@@ -3,7 +3,7 @@ import exampleReducer from './modules/example/exampleSlice';
 
 const store = configureStore({
   reducer: {
-    button: exampleReducer,
+    example: exampleReducer,
   },
 });
 

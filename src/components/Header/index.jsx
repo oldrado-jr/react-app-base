@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import Nav from './styled';
 
 function Header() {
-  const botaoClicado = useSelector((state) => state.button.botaoClicado);
+  const clickedButton = useSelector((state) => state.example.clickedButton);
 
   return (
     <Nav>
@@ -18,7 +18,7 @@ function Header() {
       <Link to="/teste">
         <FaSignInAlt size={24} />
       </Link>
-      {botaoClicado ? 'Clicado' : 'Não clicado'}
+      {clickedButton ? 'Clicado' : 'Não clicado'}
     </Nav>
   );
 }

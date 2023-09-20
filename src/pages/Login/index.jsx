@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { Title, Paragrafo } from './styled';
 import { Container } from '../../styles/GlobalStyles';
-import { botaoClicado } from '../../store/modules/example/exampleSlice';
+import { clickedButton } from '../../store/modules/example/exampleSlice';
 
 function Login() {
   const dispatch = useDispatch();
@@ -10,7 +10,7 @@ function Login() {
   const handleClick = (e) => {
     e.preventDefault();
     dispatch({
-      type: botaoClicado.type,
+      type: clickedButton.type,
     });
   };
 
