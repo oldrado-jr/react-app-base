@@ -3,8 +3,7 @@ import { toast } from 'react-toastify';
 import * as actions from './exampleSlice';
 
 const request = () =>
-  // eslint-disable-next-line no-unused-vars
-  new Promise((resolve, reject) => {
+  new Promise((resolve) => {
     setTimeout(() => {
       resolve();
     }, 2000);
