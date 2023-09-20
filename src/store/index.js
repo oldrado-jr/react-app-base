@@ -1,10 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit';
-import exampleReducer from './modules/example/exampleSlice';
+import createSagaMiddleware from 'redux-saga';
+import rootReducer from './modules/rootReducer';
+import rootSaga from './modules/rootSaga';
+
+const sagaMiddleware = createSagaMiddleware();
 
 const store = configureStore({
-  reducer: {
-    example: exampleReducer,
-  },
+  reducer: rootReducer,
+  middleware: [sagaMiddleware],
 });
+
+sagaMiddleware.run(rootSaga);
 
 export default store;

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { createSlice } from '@reduxjs/toolkit';
 
 const exampleSlice = createSlice({
@@ -6,13 +7,23 @@ const exampleSlice = createSlice({
     clickedButton: false,
   },
   reducers: {
-    // eslint-disable-next-line no-unused-vars
-    clickedButton(state, action) {
+    clickedButtonSucceeded(state, action) {
+      console.log('Sucesso =D');
       // eslint-disable-next-line no-param-reassign
       state.clickedButton = !state.clickedButton;
+    },
+    clickedButtonFailed(state, action) {
+      console.log('Deu ruim =(');
+    },
+    clickedButtonRequested(state, action) {
+      console.log('Estou fazendo a requisição...');
     },
   },
 });
 
-export const { clickedButton } = exampleSlice.actions;
+export const {
+  clickedButtonSucceeded,
+  clickedButtonFailed,
+  clickedButtonRequested,
+} = exampleSlice.actions;
 export default exampleSlice.reducer;
