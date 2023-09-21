@@ -1,5 +1,5 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import exampleReducer from './example/exampleSlice';
+import exampleReducer from './example/example-slice';
 
 const rootReducer = combineReducers({
   example: exampleReducer,

@@ -1,6 +1,6 @@
 import { all, call, put, takeLatest } from 'redux-saga/effects';
 import { toast } from 'react-toastify';
-import * as actions from './exampleSlice';
+import * as actions from './example-slice';
 
 const request = () =>
   new Promise((resolve) => {
