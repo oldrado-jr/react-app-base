@@ -10,7 +10,7 @@ function MyRoute({ component: Component, isClosed, ...rest }) {
       <Redirect
         to={{
           pathname: '/login',
-          state: { prevState: rest.location.pathname },
+          state: { prevPath: rest.location.pathname },
         }}
       />
     );
