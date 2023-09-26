@@ -1,6 +1,7 @@
 import { all, call, put, takeLatest } from 'redux-saga/effects';
 import { toast } from 'react-toastify';
-import * as actions from './example-slice';
+import { clickedButtonRequested } from './example-slice';
+import { clickedButtonFailed, clickedButtonSucceeded } from './actions';
 
 const request = () =>
   new Promise((resolve) => {
@@ -13,17 +14,11 @@ function* exampleRequest() {
   try {
     yield call(request);
     toast.success('Sucesso!');
-    yield put({
-      type: actions.clickedButtonSucceeded.type,
-    });
+    yield put(clickedButtonSucceeded());
   } catch (error) {
     toast.error('Deu erro =(');
-    yield put({
-      type: actions.clickedButtonFailed.type,
-    });
+    yield put(clickedButtonFailed());
   }
 }
 
-export default all([
-  takeLatest(actions.clickedButtonRequested.type, exampleRequest),
-]);
+export default all([takeLatest(clickedButtonRequested.type, exampleRequest)]);

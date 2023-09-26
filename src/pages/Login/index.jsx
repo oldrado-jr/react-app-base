@@ -2,16 +2,14 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { Title, Paragrafo } from './styled';
 import { Container } from '../../styles/GlobalStyles';
-import { clickedButtonRequested } from '../../store/modules/example/example-slice';
+import { clickedButtonRequested } from '../../store/modules/example/actions';
 
 function Login() {
   const dispatch = useDispatch();
 
   const handleClick = (e) => {
     e.preventDefault();
-    dispatch({
-      type: clickedButtonRequested.type,
-    });
+    dispatch(clickedButtonRequested());
   };
 
   return (
